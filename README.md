@@ -220,14 +220,26 @@ streamlit run app.py
 
 Then open http://localhost:8501 in your browser.
 
-## Sample Output Description
+## Sample Output
+
+> 📂 **View the generated reports directly:**
+> - [**shortlist_report.html**](output/shortlist_report.html) — Interactive dark-themed HTML report with candidate cards, colour-coded score bars, and recommendation pills
+> - [**shortlist_report.json**](output/shortlist_report.json) — Machine-readable JSON with all 5 candidates, scores, justifications, and metadata
 
 After execution, the `output/` folder contains:
-- **`shortlist_report.html`** — Interactive dark-themed HTML report with
-  candidate cards, colour-coded score bars, and recommendation pills
-- **`shortlist_report.json`** — Machine-readable JSON with all scores,
-  justifications, and metadata
+- **`shortlist_report.html`** — Download and open in a browser to see the full interactive report
+- **`shortlist_report.json`** — Structured audit snapshot (5 candidates, 25 dimension scores)
 - **`override_audit.jsonl`** — Append-only audit log of any HR overrides
+
+### Sample Results Summary
+
+| Rank | Candidate | Score | Recommendation | Match Quality |
+|------|-----------|-------|----------------|---------------|
+| 1 | Alice Chen | 8.45 | 🟢 Hire | Strong — ML Engineer, 4 yrs, 31 skills |
+| 2 | Priya Sharma | 8.20 | 🟢 Hire | Strong — ML Engineer, 3.5 yrs, 32 skills |
+| 3 | Sarah Johnson | 7.20 | 🟡 Maybe | Partial — Data Scientist, NLP focus |
+| 4 | Bob Martinez | 4.20 | 🔴 No Hire | Weak — Data Analyst, no ML experience |
+| 5 | Deepak Gupta | 0.80 | 🔴 No Hire | None — Web Developer, wrong domain |
 
 ## Prompt Design & Guardrails
 
