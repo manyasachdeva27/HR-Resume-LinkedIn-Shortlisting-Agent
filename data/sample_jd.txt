@@ -1,0 +1,67 @@
+Machine Learning Engineer
+
+Location: Bangalore, India (Hybrid — 3 days onsite)
+Department: AI & Data Science
+Reports to: Head of Machine Learning
+
+────────────────────────────────────────────────────
+About the Role
+────────────────────────────────────────────────────
+
+We are looking for a Machine Learning Engineer to join our growing AI team. You will design, build, and deploy production-grade machine learning models that power core product features. You will collaborate closely with data scientists, backend engineers, and product managers to take models from research prototypes to scalable, monitored services.
+
+────────────────────────────────────────────────────
+Key Responsibilities
+────────────────────────────────────────────────────
+
+• Design and implement end-to-end ML pipelines: data ingestion, feature engineering, model training, evaluation, and deployment.
+• Build and maintain real-time and batch inference services using REST APIs and message queues.
+• Optimise model performance through hyperparameter tuning, architecture search, and profiling.
+• Set up experiment tracking, model versioning, and A/B testing infrastructure.
+• Collaborate with data engineers to ensure high-quality, reliable data pipelines.
+• Monitor model drift, data quality, and system health in production.
+• Write clean, well-tested, production-quality Python code.
+• Participate in code reviews and contribute to internal ML best practices documentation.
+
+────────────────────────────────────────────────────
+Required Skills & Qualifications
+────────────────────────────────────────────────────
+
+• 3+ years of professional experience in machine learning engineering or a related role.
+• Strong proficiency in Python and scientific computing libraries (NumPy, Pandas, Scikit-learn).
+• Hands-on experience with at least one deep learning framework: TensorFlow or PyTorch.
+• Experience deploying ML models to production using Docker, Kubernetes, or cloud services (AWS SageMaker, GCP Vertex AI).
+• Solid understanding of classical ML algorithms (regression, classification, clustering, ensemble methods).
+• Familiarity with SQL and data warehousing concepts.
+• Bachelor's degree in Computer Science, Mathematics, Statistics, or a related quantitative field.
+• Strong problem-solving skills and attention to detail.
+
+────────────────────────────────────────────────────
+Preferred Skills
+────────────────────────────────────────────────────
+
+• Experience with MLOps tools: MLflow, Kubeflow, Airflow, or DVC.
+• Familiarity with NLP techniques (transformers, embeddings, fine-tuning LLMs).
+• Experience with distributed training (Horovod, DeepSpeed, FSDP).
+• Knowledge of vector databases (Pinecone, Weaviate, Chroma).
+• Published research or open-source contributions in ML.
+• Master's degree or PhD in a relevant field.
+
+────────────────────────────────────────────────────
+Certifications (Nice to Have)
+────────────────────────────────────────────────────
+
+• Google Professional Machine Learning Engineer
+• AWS Certified Machine Learning — Specialty
+• TensorFlow Developer Certificate
+• DeepLearning.AI specialisations
+
+────────────────────────────────────────────────────
+What We Offer
+────────────────────────────────────────────────────
+
+• Competitive salary and equity
+• Health insurance for you and your family
+• Flexible work hours and hybrid model
+• Learning & development budget
+• Opportunity to work on cutting-edge AI products

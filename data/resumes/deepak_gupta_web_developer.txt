@@ -1,0 +1,24 @@
+DEEPAK GUPTA
+deepak.gupta@email.com | github.com/deepakg
+
+PROFESSIONAL SUMMARY
+Junior web developer with 1 year of experience building WordPress sites and basic HTML/CSS pages. Currently learning JavaScript and React through online courses.
+
+EDUCATION
+Bachelor of Arts in English Literature — Delhi University (2022)
+
+WORK EXPERIENCE
+Web Developer Intern — LocalBiz Solutions (Jan 2023 – Present, 1 year)
+- Built and maintained 8 WordPress websites for small businesses
+- Customised themes using basic CSS modifications
+- Managed hosting and domain setup via cPanel
+
+SKILLS
+HTML, CSS, WordPress, cPanel, Basic JavaScript, Microsoft Office, Canva
+
+PROJECTS
+- Personal Blog: Built a WordPress blog about tech news with 500 monthly visitors
+- Portfolio Site: Created a static HTML/CSS portfolio page
+
+CERTIFICATIONS
+None

@@ -1,0 +1,217 @@
+{
+  "job_title": "Machine Learning Engineer",
+  "total_candidates": 5,
+  "ranked_candidates": [
+    {
+      "candidate_name": "ALICE CHEN",
+      "skills_match": {
+        "dimension": "Skills Match",
+        "score": 9.0,
+        "weight": 0.3,
+        "weighted_score": 2.7,
+        "justification": "Matches most required skills"
+      },
+      "experience_relevance": {
+        "dimension": "Experience Relevance",
+        "score": 8.0,
+        "weight": 0.25,
+        "weighted_score": 2.0,
+        "justification": "Relevant experience in ML"
+      },
+      "education_certs": {
+        "dimension": "Education & Certifications",
+        "score": 9.0,
+        "weight": 0.15,
+        "weighted_score": 1.35,
+        "justification": "Exceeds education requirements"
+      },
+      "project_portfolio": {
+        "dimension": "Project / Portfolio",
+        "score": 8.0,
+        "weight": 0.2,
+        "weighted_score": 1.6,
+        "justification": "Strong relevant projects"
+      },
+      "communication_quality": {
+        "dimension": "Communication Quality",
+        "score": 8.0,
+        "weight": 0.1,
+        "weighted_score": 0.8,
+        "justification": "Clear summary and skills"
+      },
+      "total_weighted_score": 8.45,
+      "recommendation": "Hire",
+      "override": null,
+      "override_adjusted_score": null
+    },
+    {
+      "candidate_name": "Priya Sharma",
+      "skills_match": {
+        "dimension": "Skills Match",
+        "score": 9.0,
+        "weight": 0.3,
+        "weighted_score": 2.7,
+        "justification": "Most required skills present"
+      },
+      "experience_relevance": {
+        "dimension": "Experience Relevance",
+        "score": 8.0,
+        "weight": 0.25,
+        "weighted_score": 2.0,
+        "justification": "Relevant experience in ML"
+      },
+      "education_certs": {
+        "dimension": "Education & Certifications",
+        "score": 8.0,
+        "weight": 0.15,
+        "weighted_score": 1.2,
+        "justification": "Meets education and some certifications"
+      },
+      "project_portfolio": {
+        "dimension": "Project / Portfolio",
+        "score": 8.0,
+        "weight": 0.2,
+        "weighted_score": 1.6,
+        "justification": "Relevant projects in CV and DL"
+      },
+      "communication_quality": {
+        "dimension": "Communication Quality",
+        "score": 7.0,
+        "weight": 0.1,
+        "weighted_score": 0.7,
+        "justification": "Clear and concise summary"
+      },
+      "total_weighted_score": 8.2,
+      "recommendation": "Hire",
+      "override": null,
+      "override_adjusted_score": null
+    },
+    {
+      "candidate_name": "SARAH JOHNSON",
+      "skills_match": {
+        "dimension": "Skills Match",
+        "score": 7.0,
+        "weight": 0.3,
+        "weighted_score": 2.1,
+        "justification": "Lacks Docker, Kubernetes"
+      },
+      "experience_relevance": {
+        "dimension": "Experience Relevance",
+        "score": 6.0,
+        "weight": 0.25,
+        "weighted_score": 1.5,
+        "justification": "Adjacent domain"
+      },
+      "education_certs": {
+        "dimension": "Education & Certifications",
+        "score": 8.0,
+        "weight": 0.15,
+        "weighted_score": 1.2,
+        "justification": "Meets education, some certifications"
+      },
+      "project_portfolio": {
+        "dimension": "Project / Portfolio",
+        "score": 8.0,
+        "weight": 0.2,
+        "weighted_score": 1.6,
+        "justification": "Strong NLP projects"
+      },
+      "communication_quality": {
+        "dimension": "Communication Quality",
+        "score": 8.0,
+        "weight": 0.1,
+        "weighted_score": 0.8,
+        "justification": "Clear summary"
+      },
+      "total_weighted_score": 7.2,
+      "recommendation": "Maybe",
+      "override": null,
+      "override_adjusted_score": null
+    },
+    {
+      "candidate_name": "BOB MARTINEZ",
+      "skills_match": {
+        "dimension": "Skills Match",
+        "score": 4.0,
+        "weight": 0.3,
+        "weighted_score": 1.2,
+        "justification": "Limited ML skills"
+      },
+      "experience_relevance": {
+        "dimension": "Experience Relevance",
+        "score": 4.0,
+        "weight": 0.25,
+        "weighted_score": 1.0,
+        "justification": "Adjacent domain"
+      },
+      "education_certs": {
+        "dimension": "Education & Certifications",
+        "score": 4.0,
+        "weight": 0.15,
+        "weighted_score": 0.6,
+        "justification": "Meets minimum education"
+      },
+      "project_portfolio": {
+        "dimension": "Project / Portfolio",
+        "score": 4.0,
+        "weight": 0.2,
+        "weighted_score": 0.8,
+        "justification": "Generic project"
+      },
+      "communication_quality": {
+        "dimension": "Communication Quality",
+        "score": 6.0,
+        "weight": 0.1,
+        "weighted_score": 0.6,
+        "justification": "Adequate clarity"
+      },
+      "total_weighted_score": 4.2,
+      "recommendation": "No Hire",
+      "override": null,
+      "override_adjusted_score": null
+    },
+    {
+      "candidate_name": "DEEPAK GUPTA",
+      "skills_match": {
+        "dimension": "Skills Match",
+        "score": 0.0,
+        "weight": 0.3,
+        "weighted_score": 0.0,
+        "justification": "No relevant skills"
+      },
+      "experience_relevance": {
+        "dimension": "Experience Relevance",
+        "score": 0.0,
+        "weight": 0.25,
+        "weighted_score": 0.0,
+        "justification": "Unrelated domain"
+      },
+      "education_certs": {
+        "dimension": "Education & Certifications",
+        "score": 0.0,
+        "weight": 0.15,
+        "weighted_score": 0.0,
+        "justification": "Non-quantitative degree"
+      },
+      "project_portfolio": {
+        "dimension": "Project / Portfolio",
+        "score": 2.0,
+        "weight": 0.2,
+        "weighted_score": 0.4,
+        "justification": "Basic web projects"
+      },
+      "communication_quality": {
+        "dimension": "Communication Quality",
+        "score": 4.0,
+        "weight": 0.1,
+        "weighted_score": 0.4,
+        "justification": "Adequate clarity"
+      },
+      "total_weighted_score": 0.8,
+      "recommendation": "No Hire",
+      "override": null,
+      "override_adjusted_score": null
+    }
+  ],
+  "generated_at": "2026-05-11 03:15:26"
+}

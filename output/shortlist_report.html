@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortlist Report — Machine Learning Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-card-hover: #1a1a26;
+            --bg-elevated: #1e1e2e;
+            --border: rgba(255,255,255,0.06);
+            --border-hover: rgba(255,255,255,0.12);
+            --text-primary: #e8e8ed;
+            --text-secondary: #8b8b9e;
+            --text-muted: #5a5a6e;
+            --accent-blue: #6366f1;
+            --accent-violet: #8b5cf6;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+            --accent-cyan: #06b6d4;
+            --gradient-brand: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+            --gradient-emerald: linear-gradient(135deg, #059669, #10b981);
+            --gradient-amber: linear-gradient(135deg, #d97706, #f59e0b);
+            --gradient-rose: linear-gradient(135deg, #e11d48, #f43f5e);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.5);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.6);
+            --shadow-glow-blue: 0 0 30px rgba(99,102,241,0.15);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 20px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1160px; margin: 0 auto; padding: 40px 24px; }
+
+        /* ── Hero Header ───────────────────────────────── */
+        .hero {
+            position: relative;
+            padding: 48px 52px;
+            border-radius: var(--radius-xl);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: var(--gradient-brand);
+            border-radius: calc(var(--radius-xl) + 2px);
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            z-index: -1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 14px;
+            background: rgba(99,102,241,0.12);
+            border: 1px solid rgba(99,102,241,0.25);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #a5b4fc;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #fff 0%, #c7d2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle { color: var(--text-secondary); font-size: 15px; margin-bottom: 28px; }
+
+        .hero-stats {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 160px;
+            padding: 18px 22px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+        .stat-value { font-size: 26px; font-weight: 700; margin-top: 4px; color: var(--text-primary); }
+
+        /* ── Summary Pills ─────────────────────────────── */
+        .summary-row { display: flex; gap: 14px; margin-bottom: 32px; flex-wrap: wrap; }
+
+        .summary-pill {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px 24px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            transition: all 0.3s ease;
+        }
+
+        .summary-pill:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+        .pill-icon {
+            width: 48px; height: 48px;
+            border-radius: var(--radius-md);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+        }
+
+        .pill-hire .pill-icon { background: rgba(16,185,129,0.12); }
+        .pill-maybe .pill-icon { background: rgba(245,158,11,0.12); }
+        .pill-nohire .pill-icon { background: rgba(244,63,94,0.12); }
+
+        .pill-count { font-size: 28px; font-weight: 700; }
+        .pill-hire .pill-count { color: var(--accent-emerald); }
+        .pill-maybe .pill-count { color: var(--accent-amber); }
+        .pill-nohire .pill-count { color: var(--accent-rose); }
+
+        .pill-label { font-size: 13px; color: var(--text-secondary); font-weight: 500; }
+
+        /* ── Section Titles ─────────────────────────────── */
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.3px;
+        }
+
+        .section-title .dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            box-shadow: 0 0 8px rgba(99,102,241,0.5);
+        }
+
+        /* ── Ranking Table ─────────────────────────────── */
+        .table-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 36px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+
+        thead th {
+            padding: 14px 18px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: rgba(255,255,255,0.02);
+            border-bottom: 1px solid var(--border);
+        }
+
+        thead th:first-child, thead th:nth-child(2) { text-align: left; }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+
+        tbody tr:last-child { border-bottom: none; }
+        tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+        tbody td {
+            padding: 16px 18px;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+
+        tbody td:first-child { text-align: left; font-weight: 600; color: var(--text-muted); width: 50px; }
+        tbody td:nth-child(2) { text-align: left; font-weight: 600; }
+
+        .score-cell { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 13px; }
+        .score-high { color: var(--accent-emerald); }
+        .score-mid { color: var(--accent-amber); }
+        .score-low { color: var(--accent-rose); }
+
+        .total-cell {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .rec-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .chip-hire { background: rgba(16,185,129,0.12); color: #34d399; border: 1px solid rgba(16,185,129,0.2); }
+        .chip-maybe { background: rgba(245,158,11,0.12); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); }
+        .chip-nohire { background: rgba(244,63,94,0.12); color: #fb7185; border: 1px solid rgba(244,63,94,0.2); }
+
+        .override-old { text-decoration: line-through; color: var(--text-muted); font-size: 12px; margin-right: 6px; }
+        .override-new { color: var(--accent-amber); font-weight: 700; }
+        .override-tag { display: block; font-size: 10px; color: var(--accent-amber); margin-top: 4px; font-style: italic; }
+
+        /* ── Candidate Cards ───────────────────────────── */
+        .candidate-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .candidate-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-glow-blue); }
+
+        .card-header {
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .card-header:hover { background: rgba(255,255,255,0.02); }
+
+        .card-header-left { display: flex; align-items: center; gap: 14px; }
+
+        .rank-circle {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 14px;
+            background: rgba(99,102,241,0.12);
+            color: #a5b4fc;
+            border: 1px solid rgba(99,102,241,0.2);
+        }
+
+        .card-name { font-weight: 600; font-size: 15px; }
+        .card-score { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--text-secondary); font-size: 14px; }
+
+        .chevron {
+            transition: transform 0.3s ease;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-body.open { max-height: 600px; }
+
+        .card-inner { padding: 0 24px 24px; }
+
+        .dim-item {
+            display: grid;
+            grid-template-columns: 200px 70px 1fr 1fr;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            gap: 12px;
+        }
+
+        .dim-item:last-child { border-bottom: none; }
+
+        .dim-label { font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+
+        .dim-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .bar-track {
+            height: 6px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fill-emerald { background: var(--gradient-emerald); }
+        .fill-amber { background: var(--gradient-amber); }
+        .fill-rose { background: var(--gradient-rose); }
+
+        .dim-reason { font-size: 12px; color: var(--text-muted); font-style: italic; }
+
+        .override-banner {
+            margin-top: 14px;
+            padding: 12px 16px;
+            background: rgba(245,158,11,0.08);
+            border: 1px solid rgba(245,158,11,0.15);
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--accent-amber);
+        }
+
+        /* ── Footer ────────────────────────────────────── */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .footer-line {
+            width: 60px;
+            height: 2px;
+            background: var(--gradient-brand);
+            border-radius: 1px;
+            margin: 0 auto 16px;
+        }
+
+        /* ── Animations ────────────────────────────────── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero, .summary-pill, .table-card, .candidate-card {
+            animation: fadeUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .summary-pill:nth-child(1) { animation-delay: 0.1s; }
+        .summary-pill:nth-child(2) { animation-delay: 0.2s; }
+        .summary-pill:nth-child(3) { animation-delay: 0.3s; }
+        .candidate-card:nth-child(1) { animation-delay: 0.15s; }
+        .candidate-card:nth-child(2) { animation-delay: 0.25s; }
+        .candidate-card:nth-child(3) { animation-delay: 0.35s; }
+
+        @media print {
+            body { background: #fff; color: #111; }
+            .card-body { max-height: none !important; }
+            .hero::before { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-badge">● AI-Powered Screening</div>
+        <h1>Candidate Shortlist Report</h1>
+        <p class="hero-subtitle">Structured evaluation against job requirements with bias-aware scoring</p>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-label">Position</div>
+                <div class="stat-value">Machine Learning Engineer</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Candidates</div>
+                <div class="stat-value">5</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Generated</div>
+                <div class="stat-value" style="font-size:18px;">2026-05-11 03:15:26</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    
+    
+    
+
+    <div class="summary-row">
+        <div class="summary-pill pill-hire">
+            <div class="pill-icon">✓</div>
+            <div><div class="pill-count">2</div><div class="pill-label">Recommended to Hire</div></div>
+        </div>
+        <div class="summary-pill pill-maybe">
+            <div class="pill-icon">?</div>
+            <div><div class="pill-count">1</div><div class="pill-label">Needs Further Review</div></div>
+        </div>
+        <div class="summary-pill pill-nohire">
+            <div class="pill-icon">✕</div>
+            <div><div class="pill-count">2</div><div class="pill-label">Not Recommended</div></div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="section-title"><span class="dot"></span> Rankings</div>
+    <div class="table-card">
+        <table>
+            <thead><tr>
+                <th style="width:50px">#</th>
+                <th>Candidate</th>
+                <th>Skills<br><small style="font-weight:400;opacity:0.6">30%</small></th>
+                <th>Experience<br><small style="font-weight:400;opacity:0.6">25%</small></th>
+                <th>Education<br><small style="font-weight:400;opacity:0.6">15%</small></th>
+                <th>Portfolio<br><small style="font-weight:400;opacity:0.6">20%</small></th>
+                <th>Comm.<br><small style="font-weight:400;opacity:0.6">10%</small></th>
+                <th>Total</th>
+                <th>Decision</th>
+            </tr></thead>
+            <tbody>
+            
+            
+            <tr>
+                <td>1</td>
+                <td>ALICE CHEN</td>
+                
+                <td class="score-cell score-high">9.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="score-cell score-high">9.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="total-cell">
+                    
+                    8.45
+                    
+                </td>
+                <td><span class="rec-chip chip-hire">Hire</span></td>
+            </tr>
+            
+            
+            <tr>
+                <td>2</td>
+                <td>Priya Sharma</td>
+                
+                <td class="score-cell score-high">9.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="score-cell score-high">7.0</td>
+                
+                <td class="total-cell">
+                    
+                    8.20
+                    
+                </td>
+                <td><span class="rec-chip chip-hire">Hire</span></td>
+            </tr>
+            
+            
+            <tr>
+                <td>3</td>
+                <td>SARAH JOHNSON</td>
+                
+                <td class="score-cell score-high">7.0</td>
+                
+                <td class="score-cell score-mid">6.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="score-cell score-high">8.0</td>
+                
+                <td class="total-cell">
+                    
+                    7.20
+                    
+                </td>
+                <td><span class="rec-chip chip-maybe">Maybe</span></td>
+            </tr>
+            
+            
+            <tr>
+                <td>4</td>
+                <td>BOB MARTINEZ</td>
+                
+                <td class="score-cell score-mid">4.0</td>
+                
+                <td class="score-cell score-mid">4.0</td>
+                
+                <td class="score-cell score-mid">4.0</td>
+                
+                <td class="score-cell score-mid">4.0</td>
+                
+                <td class="score-cell score-mid">6.0</td>
+                
+                <td class="total-cell">
+                    
+                    4.20
+                    
+                </td>
+                <td><span class="rec-chip chip-nohire">No Hire</span></td>
+            </tr>
+            
+            
+            <tr>
+                <td>5</td>
+                <td>DEEPAK GUPTA</td>
+                
+                <td class="score-cell score-low">0.0</td>
+                
+                <td class="score-cell score-low">0.0</td>
+                
+                <td class="score-cell score-low">0.0</td>
+                
+                <td class="score-cell score-low">2.0</td>
+                
+                <td class="score-cell score-mid">4.0</td>
+                
+                <td class="total-cell">
+                    
+                    0.80
+                    
+                </td>
+                <td><span class="rec-chip chip-nohire">No Hire</span></td>
+            </tr>
+            
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Detail Cards -->
+    <div class="section-title"><span class="dot"></span> Detailed Breakdown</div>
+
+    
+    
+    <div class="candidate-card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="rank-circle">1</div>
+                <div>
+                    <div class="card-name">ALICE CHEN</div>
+                    <div class="card-score">8.45 / 10</div>
+                </div>
+                <span class="rec-chip chip-hire" style="margin-left:8px">Hire</span>
+            </div>
+            <span class="chevron">▾</span>
+        </div>
+        <div class="card-body">
+            <div class="card-inner">
+                
+                
+                <div class="dim-item">
+                    <span class="dim-label">Skills Match (30%)</span>
+                    <span class="dim-value score-high">9.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:90%"></div>
+                    </div>
+                    <span class="dim-reason">Matches most required skills</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Experience (25%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Relevant experience in ML</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Education & Certs (15%)</span>
+                    <span class="dim-value score-high">9.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:90%"></div>
+                    </div>
+                    <span class="dim-reason">Exceeds education requirements</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Portfolio (20%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Strong relevant projects</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Communication (10%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Clear summary and skills</span>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="candidate-card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="rank-circle">2</div>
+                <div>
+                    <div class="card-name">Priya Sharma</div>
+                    <div class="card-score">8.20 / 10</div>
+                </div>
+                <span class="rec-chip chip-hire" style="margin-left:8px">Hire</span>
+            </div>
+            <span class="chevron">▾</span>
+        </div>
+        <div class="card-body">
+            <div class="card-inner">
+                
+                
+                <div class="dim-item">
+                    <span class="dim-label">Skills Match (30%)</span>
+                    <span class="dim-value score-high">9.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:90%"></div>
+                    </div>
+                    <span class="dim-reason">Most required skills present</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Experience (25%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Relevant experience in ML</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Education & Certs (15%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Meets education and some certifications</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Portfolio (20%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Relevant projects in CV and DL</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Communication (10%)</span>
+                    <span class="dim-value score-high">7.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:70%"></div>
+                    </div>
+                    <span class="dim-reason">Clear and concise summary</span>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="candidate-card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="rank-circle">3</div>
+                <div>
+                    <div class="card-name">SARAH JOHNSON</div>
+                    <div class="card-score">7.20 / 10</div>
+                </div>
+                <span class="rec-chip chip-maybe" style="margin-left:8px">Maybe</span>
+            </div>
+            <span class="chevron">▾</span>
+        </div>
+        <div class="card-body">
+            <div class="card-inner">
+                
+                
+                <div class="dim-item">
+                    <span class="dim-label">Skills Match (30%)</span>
+                    <span class="dim-value score-high">7.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:70%"></div>
+                    </div>
+                    <span class="dim-reason">Lacks Docker, Kubernetes</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Experience (25%)</span>
+                    <span class="dim-value score-mid">6.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-amber" style="width:60%"></div>
+                    </div>
+                    <span class="dim-reason">Adjacent domain</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Education & Certs (15%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Meets education, some certifications</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Portfolio (20%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Strong NLP projects</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Communication (10%)</span>
+                    <span class="dim-value score-high">8.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-emerald" style="width:80%"></div>
+                    </div>
+                    <span class="dim-reason">Clear summary</span>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="candidate-card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="rank-circle">4</div>
+                <div>
+                    <div class="card-name">BOB MARTINEZ</div>
+                    <div class="card-score">4.20 / 10</div>
+                </div>
+                <span class="rec-chip chip-nohire" style="margin-left:8px">No Hire</span>
+            </div>
+            <span class="chevron">▾</span>
+        </div>
+        <div class="card-body">
+            <div class="card-inner">
+                
+                
+                <div class="dim-item">
+                    <span class="dim-label">Skills Match (30%)</span>
+                    <span class="dim-value score-mid">4.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-amber" style="width:40%"></div>
+                    </div>
+                    <span class="dim-reason">Limited ML skills</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Experience (25%)</span>
+                    <span class="dim-value score-mid">4.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-amber" style="width:40%"></div>
+                    </div>
+                    <span class="dim-reason">Adjacent domain</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Education & Certs (15%)</span>
+                    <span class="dim-value score-mid">4.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-amber" style="width:40%"></div>
+                    </div>
+                    <span class="dim-reason">Meets minimum education</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Portfolio (20%)</span>
+                    <span class="dim-value score-mid">4.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-amber" style="width:40%"></div>
+                    </div>
+                    <span class="dim-reason">Generic project</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Communication (10%)</span>
+                    <span class="dim-value score-mid">6.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-amber" style="width:60%"></div>
+                    </div>
+                    <span class="dim-reason">Adequate clarity</span>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="candidate-card">
+        <div class="card-header" onclick="toggle(this)">
+            <div class="card-header-left">
+                <div class="rank-circle">5</div>
+                <div>
+                    <div class="card-name">DEEPAK GUPTA</div>
+                    <div class="card-score">0.80 / 10</div>
+                </div>
+                <span class="rec-chip chip-nohire" style="margin-left:8px">No Hire</span>
+            </div>
+            <span class="chevron">▾</span>
+        </div>
+        <div class="card-body">
+            <div class="card-inner">
+                
+                
+                <div class="dim-item">
+                    <span class="dim-label">Skills Match (30%)</span>
+                    <span class="dim-value score-low">0.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-rose" style="width:0%"></div>
+                    </div>
+                    <span class="dim-reason">No relevant skills</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Experience (25%)</span>
+                    <span class="dim-value score-low">0.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-rose" style="width:0%"></div>
+                    </div>
+                    <span class="dim-reason">Unrelated domain</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Education & Certs (15%)</span>
+                    <span class="dim-value score-low">0.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-rose" style="width:0%"></div>
+                    </div>
+                    <span class="dim-reason">Non-quantitative degree</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Portfolio (20%)</span>
+                    <span class="dim-value score-low">2.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-rose" style="width:20%"></div>
+                    </div>
+                    <span class="dim-reason">Basic web projects</span>
+                </div>
+                
+                <div class="dim-item">
+                    <span class="dim-label">Communication (10%)</span>
+                    <span class="dim-value score-mid">4.0</span>
+                    <div class="bar-track">
+                        <div class="bar-fill fill-amber" style="width:40%"></div>
+                    </div>
+                    <span class="dim-reason">Adequate clarity</span>
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="footer">
+        <div class="footer-line"></div>
+        Generated by HR Shortlisting Agent · Gemini + LangChain · 2026-05-11 03:15:26
+    </div>
+</div>
+
+<script>
+function toggle(h){
+    const b=h.nextElementSibling, c=h.querySelector('.chevron');
+    b.classList.toggle('open');
+    c.style.transform=b.classList.contains('open')?'rotate(180deg)':'rotate(0)';
+}
+</script>
+</body>
+</html>

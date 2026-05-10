@@ -1,0 +1,50 @@
+BOB MARTINEZ
+bob.martinez@email.com | +91-87654-32100
+
+────────────────────────────────────────────────────
+SUMMARY
+────────────────────────────────────────────────────
+
+Data Analyst with 2 years of experience in business intelligence and reporting. Looking to transition into a machine learning role.
+
+────────────────────────────────────────────────────
+EXPERIENCE
+────────────────────────────────────────────────────
+
+Data Analyst | RetailAnalytics Co. | Jul 2022 – Present (2 years)
+• Created weekly sales dashboards using Tableau and Power BI for executive reporting.
+• Wrote SQL queries to extract and transform data from PostgreSQL data warehouse.
+• Performed basic statistical analysis (regression, hypothesis testing) using Excel and Python.
+• Automated report generation scripts using Python and Pandas.
+
+Intern — Business Intelligence | SmallTech Ltd. | Jan 2022 – Jun 2022 (6 months)
+• Assisted in data cleaning and preparation using Excel and Python.
+• Learned SQL basics and helped maintain ETL scripts.
+
+────────────────────────────────────────────────────
+EDUCATION
+────────────────────────────────────────────────────
+
+Bachelor of Commerce (B.Com) | Mumbai University | 2018 – 2021
+
+────────────────────────────────────────────────────
+SKILLS
+────────────────────────────────────────────────────
+
+Languages: Python (basic), SQL, Excel (advanced)
+Tools: Tableau, Power BI, Google Sheets
+Libraries: Pandas, Matplotlib
+Other: Basic statistics, data cleaning
+
+────────────────────────────────────────────────────
+CERTIFICATIONS
+────────────────────────────────────────────────────
+
+• Google Data Analytics Professional Certificate (2022)
+
+────────────────────────────────────────────────────
+PROJECTS
+────────────────────────────────────────────────────
+
+1. Sales Forecasting Dashboard
+   Built a Tableau dashboard showing monthly sales trends with basic moving average forecasts.

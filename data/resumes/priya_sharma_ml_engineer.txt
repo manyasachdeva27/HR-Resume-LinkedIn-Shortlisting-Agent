@@ -1,0 +1,65 @@
+PRIYA SHARMA
+priya.sharma@email.com | +91-99887-76655 | linkedin.com/in/priyasharma
+
+────────────────────────────────────────────────────
+PROFESSIONAL SUMMARY
+────────────────────────────────────────────────────
+
+ML Engineer with 3 years of experience in computer vision and deep learning. Currently working on autonomous vehicle perception systems. Strong background in model optimization and edge deployment.
+
+────────────────────────────────────────────────────
+PROFESSIONAL EXPERIENCE
+────────────────────────────────────────────────────
+
+ML Engineer | AutoDrive AI | Mar 2022 – Present (2 years)
+• Developed object detection and tracking models using YOLOv8 and PyTorch for autonomous driving.
+• Optimised models for edge deployment using TensorRT and ONNX, achieving 30 FPS on Jetson AGX.
+• Built data pipelines for processing 2TB+ of driving data daily using Apache Spark.
+• Implemented distributed training with PyTorch DDP across 8-GPU clusters.
+
+Junior ML Engineer | VisionTech | Aug 2021 – Feb 2022 (7 months)
+• Built image classification models for quality inspection in manufacturing.
+• Used TensorFlow and Keras for training and Flask for serving predictions.
+• Created annotation pipelines and managed labeling workflows.
+
+Research Assistant | IISc Bangalore | Jan 2021 – Jul 2021 (6 months)
+• Assisted in research on self-supervised learning for medical image analysis.
+• Published a co-authored paper at MICCAI 2021 workshop.
+
+────────────────────────────────────────────────────
+EDUCATION
+────────────────────────────────────────────────────
+
+Bachelor of Technology in Computer Science | BITS Pilani | 2017 – 2021
+
+────────────────────────────────────────────────────
+SKILLS
+────────────────────────────────────────────────────
+
+Languages: Python, C++, CUDA, SQL
+ML Frameworks: PyTorch, TensorFlow, Keras, OpenCV, Scikit-learn
+MLOps: Docker, Kubernetes, MLflow, DVC
+Cloud: GCP (Vertex AI, Compute Engine), AWS (EC2, S3)
+Data: NumPy, Pandas, Spark, PostgreSQL
+Specialised: Computer Vision, Object Detection, Model Optimization, Edge AI
+Other: Git, Linux, REST APIs, gRPC, Distributed Training
+
+────────────────────────────────────────────────────
+CERTIFICATIONS
+────────────────────────────────────────────────────
+
+• TensorFlow Developer Certificate (2022)
+• NVIDIA Deep Learning Institute — Computer Vision (2023)
+
+────────────────────────────────────────────────────
+PROJECTS
+────────────────────────────────────────────────────
+
+1. Real-Time Pedestrian Detection System
+   End-to-end detection pipeline using YOLOv8 + DeepSORT for multi-object tracking. Deployed on NVIDIA Jetson with 25 FPS throughput.
+
+2. Medical Image Segmentation
+   U-Net based segmentation model for retinal OCT scans. Achieved 0.92 Dice score. Research published at MICCAI 2021 workshop.
+
+3. Automated Data Labeling Tool
+   Built a semi-automated annotation tool using active learning to reduce manual labeling effort by 50%.

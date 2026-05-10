@@ -1,0 +1,34 @@
+SARAH JOHNSON
+sarah.j@email.com | linkedin.com/in/sarahjohnson | github.com/sarahj-ml
+
+PROFESSIONAL SUMMARY
+Data scientist with 2.5 years of experience in NLP and predictive analytics. Comfortable with Python, scikit-learn, and basic deep learning. Transitioning from data analytics into full ML engineering. Strong communicator with experience presenting insights to C-suite stakeholders.
+
+EDUCATION
+Master of Science in Statistics — University of Michigan (2022)
+Bachelor of Science in Mathematics — University of Michigan (2020)
+
+WORK EXPERIENCE
+
+Data Scientist — Analytix Corp (Jul 2022 – Present, 2.5 years)
+- Built customer churn prediction models using logistic regression and random forests (AUC 0.87)
+- Developed NLP pipeline for sentiment analysis on 50K customer reviews using spaCy and BERT fine-tuning
+- Created automated reporting dashboards in Tableau and Streamlit
+- Collaborated with engineering team to deploy one model via Flask REST API
+
+Research Assistant — University of Michigan (Jan 2021 – Jun 2022)
+- Applied Bayesian statistics to clinical trial data analysis
+- Published one conference paper on statistical methods for missing data imputation
+
+SKILLS
+Python, R, SQL, scikit-learn, Pandas, NumPy, spaCy, Hugging Face Transformers,
+Basic PyTorch, Tableau, Streamlit, Flask, Git, Linux, Statistical Modelling, A/B Testing
+
+PROJECTS
+- Sentiment Classifier: Fine-tuned DistilBERT on product reviews dataset, achieved 91% accuracy
+- Housing Price Predictor: Gradient boosting model with feature engineering, top 15% on Kaggle
+- Automated Report Generator: Streamlit app that connects to SQL database and generates weekly KPI reports
+
+CERTIFICATIONS
+- Google Data Analytics Professional Certificate
+- DeepLearning.AI TensorFlow Developer Certificate (in progress)
