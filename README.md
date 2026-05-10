@@ -1,9 +1,3 @@
-# HireIQ — AI-Powered HR Candidate Shortlisting Agent
-
-> **Internship Assignment Submission** | AI Enablement Track | Task 1
-
----
-
 ## Overview
 
 HireIQ is a production-grade AI agent that automates the first stage of
@@ -314,6 +308,3 @@ SCORING RULES:
 | English only | Multi-language resume support via translation layer |
 | No PDF export | Add ReportLab PDF generation alongside HTML |
 
-## Author
-
-Built as part of the AI Enablement Internship — Task 1.
